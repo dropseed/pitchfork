@@ -13,24 +13,42 @@ function pathToURL(p) {
   return "/" + p.split(path.sep).slice(0, -1).join("/") + "/";
 }
 
-program
-  .version(require('./package.json').version)
+program.version(require("./package.json").version);
 
 program
   .command("index")
   .description("create an index for a static site directory")
   .arguments("<dir>")
-  .requiredOption('-c, --content-selector <selector>', 'DOM selector for your main content area')
-  .option('-i, --index-filename <path>', 'Filename to save the index JSON', "search-index.json")
-  .option('--content-title-selector <selector>', 'DOM selector for the title of your content area', "h1")
-  .option('--content-headings-selector <selector>', 'DOM selector for the additional headings of your content area', "h2")
-  .option('--glob <pattern>', 'Files to index in the given directory', "**/*.html")
-  .action(function (dir) {
-    const indexFilename = program.indexFilename
-    const contentSelector = program.contentSelector
-    const contentTitleSelector = program.contentTitleSelector
-    const contentHeadingsSelector = program.contentHeadingsSelector
-    const globPattern = program.glob
+  .requiredOption(
+    "-c, --content-selector <selector>",
+    "DOM selector for your main content area"
+  )
+  .option(
+    "-i, --index-filename <path>",
+    "Filename to save the index JSON",
+    "search-index.json"
+  )
+  .option(
+    "--content-title-selector <selector>",
+    "DOM selector for the title of your content area",
+    "h1"
+  )
+  .option(
+    "--content-headings-selector <selector>",
+    "DOM selector for the additional headings of your content area",
+    "h2"
+  )
+  .option(
+    "--glob <pattern>",
+    "Files to index in the given directory",
+    "**/*.html"
+  )
+  .action(function (dir, cmd) {
+    const indexFilename = cmd.indexFilename;
+    const contentSelector = cmd.contentSelector;
+    const contentTitleSelector = cmd.contentTitleSelector;
+    const contentHeadingsSelector = cmd.contentHeadingsSelector;
+    const globPattern = cmd.glob;
 
     let outputData = {
       pages: {},
@@ -86,6 +104,6 @@ program
       fs.writeFileSync(indexPath, indexOutput);
       console.log("\nIndex written to " + indexPath);
     });
-  })
+  });
 
 program.parse(process.argv);
