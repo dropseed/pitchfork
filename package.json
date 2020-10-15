@@ -1,5 +1,5 @@
 {
-  "name": "pitchfork-search",
+  "name": "@dropseed/pitchfork",
   "version": "0.1.0",
   "description": "Client-side, local site search with a UI",
   "bin": {
@@ -8,9 +8,9 @@
   "files": ["dist"],
   "scripts": {
     "dev": "parcel browser.js",
-    "build": "parcel build browser.js --experimental-scope-hoisting",
+    "build": "rm -r dist && parcel build browser.js --experimental-scope-hoisting",
     "format": "prettier --write *.js",
-    "release": "npm run build"
+    "release": "npm run build && npm publish --access public"
   },
   "author": "Dave Gaeddert <dave.gaeddert@dropseed.io>",
   "license": "MIT",
