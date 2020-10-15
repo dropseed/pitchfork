@@ -1,0 +1,30 @@
+{
+  "name": "pitchfork",
+  "version": "0.1.0",
+  "description": "Client-side, local site search with a UI",
+  "bin": {
+    "pitchfork": "cli.js"
+  },
+  "scripts": {
+    "dev": "parcel browser.js",
+    "dev-cli": "parcel cli.js --target node",
+    "build": "parcel build browser.js --experimental-scope-hoisting && parcel build cli.js --experimental-scope-hoisting --target node",
+    "format": "prettier --write *.js"
+  },
+  "author": "Dave Gaeddert <dave.gaeddert@dropseed.io>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "commander": "^6.1.0",
+    "glob": "^7.1.6",
+    "lunr": "^2.3.9",
+    "mark.js": "^8.11.1",
+    "mustache": "^4.0.1",
+    "scroll-into-view-if-needed": "^2.2.26",
+    "truncate-html": "^1.0.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.1.2"
+  }
+}
