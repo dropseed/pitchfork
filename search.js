@@ -206,12 +206,12 @@ window.Pitchfork = Pitchfork;
 window.addEventListener("DOMContentLoaded", (event) => {
   const input = document.querySelector("[data-pitchfork-input]");
   if (input) {
+    const index = document.querySelector("[data-pitchfork-index-url]"); // can be on search, results, script
+    const results = document.querySelector("[data-pitchfork-results]");
     window.Pitchfork.init({
       input: input,
-      indexURL: document
-        .querySelector("[data-pitchfork-index-url]")
-        .getAttribute("data-pitchfork-index-url"),
-      resultsNode: document.querySelector("[data-pitchfork-results]"),
+      indexURL: index ? index.getAttribute("data-pitchfork-index-url") : null,
+      resultsNode: results,
     });
   }
 });
