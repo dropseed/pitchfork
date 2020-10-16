@@ -50,6 +50,8 @@ Generate your index:
 $ pitchfork index your_html_directory -c .dom_selector_for_main_content
 ```
 
+And include it in your JS bundle:
+
 ```js
 require("@dropseed/pitchfork/search")
 ```
