@@ -5,7 +5,7 @@
   "bin": {
     "pitchfork": "cli.js"
   },
-  "files": ["dist"],
+  "files": ["dist", "browser.js"],
   "scripts": {
     "dev": "parcel browser.js",
     "build": "rm -r dist && parcel build browser.js --experimental-scope-hoisting",
