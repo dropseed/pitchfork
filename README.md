@@ -43,7 +43,7 @@ $ npm install @dropseed/pitchfork
 ```
 
 ```js
-require("@dropseed/pitchfork/browser")
+require("@dropseed/pitchfork/search")
 ```
 
 ## HTML and templating
