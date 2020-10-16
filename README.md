@@ -31,7 +31,7 @@ Include pitchfork on your website:
 Create an index (without installing pitchfork to your project):
 
 ```sh
-$ npx -p @dropseed/pitchfork pitchfork index your_html_directory -c .content
+$ npx -p @dropseed/pitchfork pitchfork index your_html_directory -c .dom_selector_for_main_content
 ```
 
 ## Full install
@@ -40,6 +40,12 @@ Pitchfork is on [npm](https://www.npmjs.com/package/@dropseed/pitchfork).
 
 ```sh
 $ npm install @dropseed/pitchfork
+```
+
+Generate your index:
+
+```sh
+$ pitchfork index your_html_directory -c .dom_selector_for_main_content
 ```
 
 ```js
