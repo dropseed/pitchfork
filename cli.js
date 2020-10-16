@@ -34,11 +34,6 @@ program
     "h1"
   )
   .option(
-    "--content-headings-selector <selector>",
-    "DOM selector for the additional headings of your content area",
-    "h2"
-  )
-  .option(
     "--glob <pattern>",
     "Files to index in the given directory",
     "**/*.html"
@@ -47,7 +42,6 @@ program
     const indexFilename = cmd.indexFilename;
     const contentSelector = cmd.contentSelector;
     const contentTitleSelector = cmd.contentTitleSelector;
-    const contentHeadingsSelector = cmd.contentHeadingsSelector;
     const globPattern = cmd.glob;
 
     let outputData = {
@@ -68,18 +62,9 @@ program
 
         const title = content.find(contentTitleSelector);
 
-        let headings = [];
-        content.find(contentHeadingsSelector).each((_, el) => {
-          headings.push({
-            text: $(el).text().trim(),
-            id: $(el).attr("id"),
-          });
-        });
-
         const url = pathToURL(p);
         outputData.pages[url] = {
           title: $(title.get(0)).text().trim(),
-          headings: headings,
           text: content.text().trim(),
         };
       });
@@ -87,7 +72,6 @@ program
       outputData.lunr = lunr(function () {
         this.ref("url");
         this.field("title");
-        this.field("headings");
         this.field("text");
         this.metadataWhitelist = ["position"];
 
