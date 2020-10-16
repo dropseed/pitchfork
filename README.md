@@ -25,7 +25,7 @@ Include pitchfork on your website:
     {{/results}}
 </div>
 
-<script src="https://unpkg.com/@dropseed/pitchfork@^0.1.1/dist/search.js"></script>
+<script src="https://unpkg.com/@dropseed/pitchfork@<1.0.0/dist/search.js"></script>
 ```
 
 Create an index (without installing pitchfork to your project):
