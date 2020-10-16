@@ -1,5 +1,7 @@
 # pitchfork
 
+<img src="pitchfork.svg" align="right" />
+
 Pitchfork is a complete, local search solution for static sites. It knows how to index HTML content, uses [Lunr](https://lunrjs.com/) to search it, and [Mustache](https://github.com/janl/mustache.js/) for simple front-end customization.
 
 It's like [Algolia DocSearch](https://docsearch.algolia.com/), but you don't have to rely on an external service.
