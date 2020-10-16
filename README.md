@@ -1,8 +1,54 @@
 # pitchfork
 
-Client-side search index and UI for static sites
+Pitchfork is a complete, local search solution for static sites. It knows how to index HTML content, uses [Lunr](https://lunrjs.com/) to search it, and [Mustache](https://github.com/janl/mustache.js/) for simple front-end customization.
 
-## HTML
+It's like [Algolia DocSearch](https://docsearch.algolia.com/), but you don't have to rely on an external service.
+
+![Pitchfork search demo](demo.gif)
+
+## Quick install using CDN and npx
+
+Include pitchfork on your website:
+
+```html
+<input data-pitchfork-input type="text" placeholder="Search">
+<div data-pitchfork-results style="display: none;">
+    {{#results}}
+    <a href="{{url}}">
+        <div>{{{highlights.title}}}</div>
+        <div>{{{highlights.text}}}</div>
+    </a>
+    {{/results}}
+
+    {{^results}}
+    <div>No matches, keep typing...</div>
+    {{/results}}
+</div>
+
+<script src="https://unpkg.com/@dropseed/pitchfork@^0.1.1/dist/search.js"></script>
+```
+
+Create an index (without installing pitchfork to your project):
+
+```sh
+$ npx -p @dropseed/pitchfork pitchfork index your_html_directory -c .content
+```
+
+## Full install
+
+Pitchfork is on [npm](https://www.npmjs.com/package/@dropseed/pitchfork).
+
+```sh
+$ npm install @dropseed/pitchfork
+```
+
+```js
+require("@dropseed/pitchfork/browser")
+```
+
+## HTML and templating
+
+This is a more complete example showing all of the `data-pitchfork` options.
 
 ```html
 <input data-pitchfork-input type="text" placeholder="Search">
@@ -17,7 +63,6 @@ Client-side search index and UI for static sites
         <div class="font-medium">
             {{{highlights.title}}}
         </div>
-        {{#headings}}<div class="text-sm text-gray-600">{{text}}</div>{{/headings}}
         <div class="text-sm text-gray-700">
             {{{highlights.text}}}
         </div>
@@ -28,12 +73,4 @@ Client-side search index and UI for static sites
     <p>No matches, keep typing...</p>
     {{/results}}
 </div>
-```
-
-## Creating an index
-
-To create an index without installing pitchfork to your project:
-
-```sh
-$ npx -p @dropseed/pitchfork pitchfork index output -c .content
 ```

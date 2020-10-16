@@ -5,10 +5,14 @@
   "bin": {
     "pitchfork": "cli.js"
   },
-  "files": ["dist", "browser.js"],
+  "files": [
+    "dist",
+    "search.js"
+  ],
   "scripts": {
-    "dev": "parcel browser.js",
-    "build": "rm -r dist && parcel build browser.js --experimental-scope-hoisting",
+    "install": "npm install --dev",
+    "dev": "parcel search.js",
+    "build": "rm -r dist && parcel build search.js --experimental-scope-hoisting",
     "format": "prettier --write *.js",
     "pre-commit": "prettier --check *.js"
   },

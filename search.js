@@ -7,7 +7,7 @@ import truncate from "truncate-html";
 const Pitchfork = {
   init: function (settings) {
     this.input = settings.input;
-    this.indexURL = settings.indexURL;
+    this.indexURL = settings.indexURL || "/search-index.json";
     this.resultsNode = settings.resultsNode;
     this.highlightedResultNode;
     this.loadTemplate();
