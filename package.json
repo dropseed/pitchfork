@@ -10,7 +10,7 @@
     "dev": "parcel browser.js",
     "build": "rm -r dist && parcel build browser.js --experimental-scope-hoisting",
     "format": "prettier --write *.js",
-    "release": "npm run build && npm publish --access public"
+    "pre-commit": "prettier --check *.js"
   },
   "author": "Dave Gaeddert <dave.gaeddert@dropseed.io>",
   "license": "MIT",
