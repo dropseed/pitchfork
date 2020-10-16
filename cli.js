@@ -60,7 +60,7 @@ program
 
         const content = $(contentSelector);
 
-        const title = content.find(contentTitleSelector);
+        const title = content.find(contentTitleSelector).remove();
 
         const url = pathToURL(p);
         outputData.pages[url] = {
