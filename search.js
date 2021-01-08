@@ -15,7 +15,14 @@ const Pitchfork = {
   },
   loadTemplate: function () {
     // Get the template then remove it
-    this.resultsTemplate = this.resultsNode.innerHTML;
+    if (
+      this.resultsNode.children.length === 1 &&
+      this.resultsNode.children[0].nodeName === "SCRIPT"
+    ) {
+      this.resultsTemplate = this.resultsNode.children[0].innerHTML;
+    } else {
+      this.resultsTemplate = this.resultsNode.innerHTML;
+    }
     this.resultsNode.innerHTML = "";
   },
   addListeners: function () {

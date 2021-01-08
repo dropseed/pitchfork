@@ -15,6 +15,7 @@ Include pitchfork on your website:
 ```html
 <input data-pitchfork-input type="text" placeholder="Search">
 <div data-pitchfork-results style="display: none;">
+    <script type="x-tmpl-mustache">
     {{#results}}
     <a href="{{url}}">
         <div>{{{highlights.title}}}</div>
@@ -25,6 +26,7 @@ Include pitchfork on your website:
     {{^results}}
     <div>No matches, keep typing...</div>
     {{/results}}
+    </script>
 </div>
 
 <script src="https://unpkg.com/@dropseed/pitchfork@<1.0.0/dist/search.js"></script>
@@ -68,8 +70,9 @@ This is a more complete example showing all of the `data-pitchfork` options.
     data-pitchfork-highlight-class="bg-yellow-200"
     data-pitchfork-active-class="bg-gray-100"
     style="display: none;">
+    <script type="x-tmpl-mustache">
     {{#results}}
-    <a href="{{url}}" class="block py-2 px-4 border-b border-gray-200 hover:bg-gray-100">
+    <a href="{{url}}" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">
         <div class="font-medium">
             {{{highlights.title}}}
         </div>
@@ -82,5 +85,6 @@ This is a more complete example showing all of the `data-pitchfork` options.
     {{^results}}
     <p>No matches, keep typing...</p>
     {{/results}}
+    </script>
 </div>
 ```
