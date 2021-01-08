@@ -1,6 +1,6 @@
 {
   "name": "@dropseed/pitchfork",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Client-side, local site search with a UI",
   "bin": {
     "pitchfork": "cli.js"
