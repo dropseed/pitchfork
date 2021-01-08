@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitchfork Test</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <input data-pitchfork-input type="text" placeholder="Search">
+    <div data-pitchfork-results style="display: none;">
+        <script type="x-tmpl-mustache">
+        {{#results}}
+        <a href="{{url}}">
+            <div>{{{highlights.title}}}</div>
+            <div>{{{highlights.text}}}</div>
+        </a>
+        {{/results}}
+
+        {{^results}}
+        <div>No matches, keep typing...</div>
+        {{/results}}
+        </script>
+    </div>
+
+    <script src="dist/search.js"></script>
+</body>
+</html>
