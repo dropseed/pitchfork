@@ -64,8 +64,16 @@ program
 
         const url = pathToURL(p);
         outputData.pages[url] = {
-          title: $(title.get(0)).text().trim(),
-          text: content.text().trim(),
+          title: $(title.get(0))
+            .text()
+            .trim()
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;"),
+          text: content
+            .text()
+            .trim()
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;"),
         };
       });
 
