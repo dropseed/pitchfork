@@ -19,7 +19,7 @@ jobs:
         node-version: '16'
     - uses: dropseed/nextrelease@v1
       env:
-        NPM_TOKEN: ${{ secrets.DROPSEED_NPM_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.DROPSEED_NPM_TOKEN }}
       with:
         prepare_cmd: |
           npm version $NEXT_VERSION --no-git-tag-version --allow-same-version
