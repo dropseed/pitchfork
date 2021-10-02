@@ -17,6 +17,7 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '16'
+        registry-url: 'https://registry.npmjs.org'
     - uses: dropseed/nextrelease@v1
       env:
         NODE_AUTH_TOKEN: ${{ secrets.DROPSEED_NPM_TOKEN }}
