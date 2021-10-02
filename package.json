@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "dev": "parcel search.js",
-    "build": "rm -r dist && parcel build search.js --experimental-scope-hoisting",
+    "build": "rm -rf dist && parcel build search.js --experimental-scope-hoisting",
     "format": "prettier --write *.js",
     "pre-commit": "prettier --check *.js"
   },
