@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "commander": "^6.1.0",
+    "commander": "^8.2.0",
     "glob": "^7.1.6",
     "lunr": "^2.3.9",
     "mark.js": "^8.11.1",
