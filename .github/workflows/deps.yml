@@ -19,6 +19,8 @@ jobs:
       with:
         token: ${{ steps.generate_token.outputs.token }}
     - uses: actions/setup-node@v2
+      with:
+        node-version: '16'
     - run: curl https://deps.app/install.sh | bash -s -- -b $HOME/bin
     - run: $HOME/bin/deps ci
       env:
