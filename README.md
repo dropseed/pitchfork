@@ -1,12 +1,12 @@
 # pitchfork
 
-<img src="https://www.dropseed.io/pitchfork/pitchfork-logo.svg" width="100" height="100" align="right" />
+<img src="https://www.dropseed.dev/pitchfork/pitchfork-logo.svg" width="100" height="100" align="right" />
 
 Pitchfork is a complete, local search solution for static sites. It knows how to index HTML content, uses [Lunr](https://lunrjs.com/) to search it, and [Mustache](https://github.com/janl/mustache.js/) for simple front-end customization.
 
 It's like [Algolia DocSearch](https://docsearch.algolia.com/), but you don't have to rely on an external service.
 
-![Pitchfork search demo](https://www.dropseed.io/pitchfork/pitchfork-ui-demo.gif)
+![Pitchfork search demo](https://www.dropseed.dev/pitchfork/pitchfork-ui-demo.gif)
 
 ## Quick install using CDN and npx
 
