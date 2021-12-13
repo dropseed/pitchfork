@@ -15,7 +15,7 @@
     "format": "prettier --write *.js",
     "pre-commit": "prettier --check *.js"
   },
-  "author": "Dave Gaeddert <dave.gaeddert@dropseed.io>",
+  "author": "Dave Gaeddert <dave.gaeddert@dropseed.dev>",
   "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
