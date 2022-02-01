@@ -1,0 +1,111 @@
+{
+  "pages": {
+    "/page-one.html": {
+      "title": "Page one",
+      "text": ""
+    },
+    "/page-two.html": {
+      "title": "Page two",
+      "text": ""
+    }
+  },
+  "lunr": {
+    "version": "2.3.9",
+    "fields": [
+      "title",
+      "text"
+    ],
+    "fieldVectors": [
+      [
+        "title//page-one.html",
+        [
+          0,
+          0.182,
+          1,
+          0.693
+        ]
+      ],
+      [
+        "text//page-one.html",
+        []
+      ],
+      [
+        "title//page-two.html",
+        [
+          0,
+          0.182,
+          2,
+          0.693
+        ]
+      ],
+      [
+        "text//page-two.html",
+        []
+      ]
+    ],
+    "invertedIndex": [
+      [
+        "on",
+        {
+          "_index": 1,
+          "title": {
+            "/page-one.html": {
+              "position": [
+                [
+                  5,
+                  3
+                ]
+              ]
+            }
+          },
+          "text": {}
+        }
+      ],
+      [
+        "page",
+        {
+          "_index": 0,
+          "title": {
+            "/page-one.html": {
+              "position": [
+                [
+                  0,
+                  4
+                ]
+              ]
+            },
+            "/page-two.html": {
+              "position": [
+                [
+                  0,
+                  4
+                ]
+              ]
+            }
+          },
+          "text": {}
+        }
+      ],
+      [
+        "two",
+        {
+          "_index": 2,
+          "title": {
+            "/page-two.html": {
+              "position": [
+                [
+                  5,
+                  3
+                ]
+              ]
+            }
+          },
+          "text": {}
+        }
+      ]
+    ],
+    "pipeline": [
+      "stemmer"
+    ]
+  }
+}
