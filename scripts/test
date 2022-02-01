@@ -1,0 +1,7 @@
+#!/bin/sh -e
+cd tests
+echo "Running the cli command"
+node ../cli.js index site -c body
+
+echo "Comparing search index JSON output"
+diff -w site/search-index.json site/search-index-expected.json
