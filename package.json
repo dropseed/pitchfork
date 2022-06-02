@@ -10,7 +10,7 @@
     "search.js"
   ],
   "scripts": {
-    "dev": "parcel search.js",
+    "watch": "parcel watch search.js",
     "build": "rm -rf dist && parcel build search.js --experimental-scope-hoisting",
     "format": "prettier --write *.js",
     "pre-commit": "prettier --check *.js"
@@ -28,7 +28,9 @@
     "truncate-html": "^1.0.3"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
+    "buffer": "^6.0.3",
+    "events": "^3.3.0",
+    "parcel": "^2.6.0",
     "prettier": "^2.1.2"
   }
 }
