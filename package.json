@@ -24,7 +24,7 @@
     "lunr": "^2.3.9",
     "mark.js": "^8.11.1",
     "mustache": "^4.0.1",
-    "scroll-into-view-if-needed": "^3.0.6",
+    "scroll-into-view-if-needed": "^3.0.10",
     "truncate-html": "^1.0.3"
   },
   "devDependencies": {
